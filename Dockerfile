@@ -8,10 +8,6 @@ RUN apt-add-repository -y ppa:mosquitto-dev/mosquitto-ppa && apt-get install -y 
 
 VOLUME /var/lib/mosquitto/
 
-EXPOSE 1883
-EXPOSE 8883
-EXPOSE 8884
-EXPOSE 8885
-EXPOSE 8080
+EXPOSE 1883 8883 8884 8885 8080
 
 CMD /usr/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf
